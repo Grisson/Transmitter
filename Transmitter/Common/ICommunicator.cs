@@ -1,7 +1,7 @@
 ﻿
-namespace SerialLib
+namespace Common
 {
-    public interface ICommunication
+    public interface ICommunicator
     {
         bool SendData<T>(T data) where T: BaseDataPackage;
     }
