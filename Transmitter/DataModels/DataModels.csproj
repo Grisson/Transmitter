@@ -41,8 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RadioEightChannels.cs" />
-    <Compile Include="RadioFourChannels.cs" />
+    <Compile Include="RadioEightChannelsData.cs" />
+    <Compile Include="RadioMultiChannelsData.cs" />
+    <Compile Include="RadioFourChannelsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

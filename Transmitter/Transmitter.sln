@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModels", "DataModels\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationLayer", "CommunicationLayer\CommunicationLayer.csproj", "{3FCACABA-261E-4162-8296-89B388E5D174}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{412544A3-018C-4E49-9366-353EC5E80FDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.DataModels", "UnitTests.DataModels\UnitTests.DataModels.csproj", "{5464F1DD-3B34-47EF-B10B-64BC0775B00D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +37,15 @@ Global
 		{3FCACABA-261E-4162-8296-89B388E5D174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FCACABA-261E-4162-8296-89B388E5D174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FCACABA-261E-4162-8296-89B388E5D174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5464F1DD-3B34-47EF-B10B-64BC0775B00D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5464F1DD-3B34-47EF-B10B-64BC0775B00D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5464F1DD-3B34-47EF-B10B-64BC0775B00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5464F1DD-3B34-47EF-B10B-64BC0775B00D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5464F1DD-3B34-47EF-B10B-64BC0775B00D} = {412544A3-018C-4E49-9366-353EC5E80FDA}
 	EndGlobalSection
 EndGlobal

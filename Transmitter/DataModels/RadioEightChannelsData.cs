@@ -1,77 +1,82 @@
-﻿using Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SerialLib
+namespace DataModels
 {
-    class RadioFourChannels : BaseDataPackage
+    public class RadioEightChannelsData : RadioFourChannelsData
     {
-        private byte throttle;
-        private byte yaw;
-        private byte pitch;
-        private byte roll;
+        public RadioEightChannelsData() : this(8)
+        { }
 
-        public byte Throttle
+        protected RadioEightChannelsData(byte channelNumber) : base(channelNumber)
+        { }
+
+        public byte Aux1
         {
             get
             {
-                return throttle;
+                return this[4];
             }
 
             set
             {
                 if (CheckValueRangeIncludeEdge(value, 0, 255))
                 {
-                    throttle = value;
+                    this[4] = value;
                 }
             }
         }
 
-        public byte Yaw
+        public byte Aux2
         {
             get
             {
-                return yaw;
+                return this[5];
             }
 
             set
             {
                 if (CheckValueRangeIncludeEdge(value, 0, 255))
                 {
-                    yaw = value;
+                    this[5] = value;
                 }
             }
         }
 
-
-        public byte Pitch
+        public byte Aux3
         {
             get
             {
-                return pitch;
+                return this[6];
             }
 
             set
             {
                 if (CheckValueRangeIncludeEdge(value, 0, 255))
                 {
-                    pitch = value;
+                    this[6] = value;
                 }
             }
         }
 
-        public byte Roll
+        public byte Aux4
         {
             get
             {
-                return roll;
+                return this[7];
             }
 
             set
             {
                 if (CheckValueRangeIncludeEdge(value, 0, 255))
                 {
-                    roll = value;
+                    this[7] = value;
                 }
             }
         }
+
     }
 }

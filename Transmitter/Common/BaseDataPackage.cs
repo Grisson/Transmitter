@@ -8,7 +8,7 @@ namespace Common
         {
             if ((currentValue < min) || (currentValue > max))
             {
-                throw new ArgumentOutOfRangeException($"current value is {currentValue}. The range is ");
+                throw new ArgumentOutOfRangeException($"current value is {currentValue}. The range is [{min}, {max}] ");
             }
 
             return true;
