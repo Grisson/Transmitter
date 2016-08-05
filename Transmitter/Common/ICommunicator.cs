@@ -1,8 +1,8 @@
 ﻿
 namespace Common
 {
-    public interface ICommunicator
+    public interface ICommunicator<T>
     {
-        bool SendData<T>(T data) where T: BaseDataPackage;
+        void SendData(T data);
     }
 }

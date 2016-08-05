@@ -1,14 +1,67 @@
 ﻿using System;
 using Common;
-
+using System.IO.Ports;
 
 namespace SerialLib
 {
-    class SerialCommunicator : ICommunicator
+    class SerialCommunicator : ICommunicator<byte[]>, IDisposable
     {
-        public bool SendData<T>(T data) where T : BaseDataPackage
+        bool disposed = false;
+        private SerialPort port;
+
+        public SerialCommunicator(string portNumber, int baudRate)
         {
-            throw new NotImplementedException();
+            port = new SerialPort(portNumber, baudRate);
+            port.Open();
         }
+
+        #region Disposable
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        // Protected implementation of Dispose pattern.
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed)
+                return;
+
+            if (disposing)
+            {
+                // Free any other managed objects here.
+                //
+            }
+
+            // Free any unmanaged objects here.
+            //
+            this.close();
+
+            disposed = true;
+        }
+
+        ~SerialCommunicator()
+        {
+            Dispose(false);
+        }
+        #endregion
+
+        public void close()
+        {
+            if ((port != null) && (port.IsOpen))
+            {
+                port.Close();
+            }
+        }
+
+        void ICommunicator<byte[]>.SendData(byte[] data)
+        {
+            if (port.IsOpen)
+            {
+                port.Write(data, 0, data.Length);
+            }
+        }
+
     }
 }
