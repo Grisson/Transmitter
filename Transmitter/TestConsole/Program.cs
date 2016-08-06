@@ -32,6 +32,11 @@ namespace TestConsole
                     data.Pitch = Convert.ToByte((data.Pitch + 1) % 255);
                     data.Roll = Convert.ToByte((data.Roll + 1) % 255);
 
+                    //data.Aux1 = Convert.ToByte((data.Aux1 + 1) % 255);
+                    //data.Aux2 = Convert.ToByte((data.Aux2 + 1) % 255);
+                    //data.Aux3 = Convert.ToByte((data.Aux3 + 1) % 255);
+                    //data.Aux4 = Convert.ToByte((data.Aux4 + 1) % 255);
+
                     port.SendData(data.toBytes());
                 }
             }
