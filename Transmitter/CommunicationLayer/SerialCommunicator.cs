@@ -2,9 +2,9 @@
 using Common;
 using System.IO.Ports;
 
-namespace SerialLib
+namespace CommunicationLayer
 {
-    class SerialCommunicator : ICommunicator<byte[]>, IDisposable
+    public class SerialCommunicator : IDisposable //ICommunicator<byte[]>,
     {
         bool disposed = false;
         private SerialPort port;
@@ -55,7 +55,7 @@ namespace SerialLib
             }
         }
 
-        void ICommunicator<byte[]>.SendData(byte[] data)
+        public void SendData(byte[] data)
         {
             if (port.IsOpen)
             {

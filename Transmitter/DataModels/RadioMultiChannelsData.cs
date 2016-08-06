@@ -38,6 +38,15 @@ namespace DataModels
             }
         }
 
+        public byte[] toBytes()
+        {
+            var result = new byte[channelNumber];
+
+            channels.CopyTo(result, 0);
+
+            return result;
+        }
+
         protected RadioMultiChannelsData(byte totalChannelNumber)
         {
             channelNumber = totalChannelNumber;
