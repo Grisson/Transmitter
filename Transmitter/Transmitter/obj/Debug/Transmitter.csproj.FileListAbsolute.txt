@@ -1,1 +1,9 @@
 C:\_c\Transmitter\Transmitter\Transmitter\bin\Debug\Transmitter.exe.config
+C:\_c\Transmitter\Transmitter\Transmitter\bin\Debug\Transmitter.exe
+C:\_c\Transmitter\Transmitter\Transmitter\bin\Debug\Transmitter.pdb
+C:\_c\Transmitter\Transmitter\Transmitter\obj\Debug\Transmitter.csprojResolveAssemblyReference.cache
+C:\_c\Transmitter\Transmitter\Transmitter\obj\Debug\Transmitter.Form1.resources
+C:\_c\Transmitter\Transmitter\Transmitter\obj\Debug\Transmitter.Properties.Resources.resources
+C:\_c\Transmitter\Transmitter\Transmitter\obj\Debug\Transmitter.csproj.GenerateResource.Cache
+C:\_c\Transmitter\Transmitter\Transmitter\obj\Debug\Transmitter.exe
+C:\_c\Transmitter\Transmitter\Transmitter\obj\Debug\Transmitter.pdb
